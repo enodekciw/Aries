@@ -16,6 +16,9 @@ Aries is fully responsive WordPress theme with 7 colorful skins. Also, you can c
 
 == Changelog ==
 
+= 1.0.1 - Apr 22, 2015 =
+* Added rel="nofollow" to footer link
+
 = 1.0.0 - Apr 17, 2015 =
 * Initial release
 

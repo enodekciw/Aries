@@ -20,7 +20,7 @@
  * @package Aries
  * @since 1.0.0
  */
-define( 'WPLOVIN_THEME_VERSION', '1.0.0' );
+define( 'WPLOVIN_THEME_VERSION', '1.0.1' );
 define( 'WPLOVIN_THEME_NAME', 'Aries' );
 define( 'WPLOVIN_THEME_SLUG', 'aries' );
 define( 'WPLOVIN_THEME_URL', 'http://wplovin.com/wordpress-themes/aries' );
