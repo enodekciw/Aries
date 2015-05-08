@@ -23,10 +23,10 @@
 define( 'WPLOVIN_THEME_VERSION', '1.0.1' );
 define( 'WPLOVIN_THEME_NAME', 'Aries' );
 define( 'WPLOVIN_THEME_SLUG', 'aries' );
-define( 'WPLOVIN_THEME_URL', 'http://wplovin.com/wordpress-themes/aries' );
+define( 'WPLOVIN_THEME_URL', 'http://wplov.in/wordpress-themes/aries' );
 define( 'WPLOVIN_THEME_AUTHOR', 'Tom' );
-define( 'WPLOVIN_THEME_AUTHOR_EMAIL', 'hello@wplovin.com' );
-define( 'WPLOVIN_THEME_AUTHOR_URL', 'http://wplovin.com/' );
+define( 'WPLOVIN_THEME_AUTHOR_EMAIL', 'hello@wplov.in' );
+define( 'WPLOVIN_THEME_AUTHOR_URL', 'http://wplov.in/' );
 define( 'WPLOVIN_THEME_PATH', get_template_directory_uri() );
 
 /**

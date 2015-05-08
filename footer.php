@@ -9,7 +9,7 @@
 ?>
 	<section class="footer-wrap">
 		<footer>
-			<?php printf( __( 'This website is powered by %s and %s', 'aries' ), '<a href="http://www.wordpress.org/" title="WordPress">WordPress</a>', '<a href="http://wplovin.com/wordpress-themes/aries/" title="Aries WordPress theme" rel="nofollow">Aries</a> <i class="fa fa-heart"></i>' ); ?>
+			<?php printf( __( 'This website is powered by %s and %s', 'aries' ), '<a href="http://www.wordpress.org/" title="WordPress" rel="nofollow">WordPress</a>', '<a href="http://wplov.in/wordpress-themes/aries/" title="Aries WordPress theme" rel="nofollow">Aries</a> <i class="fa fa-heart"></i>' ); ?>
 		</footer>
 	</section>
 	<div class="frame">
