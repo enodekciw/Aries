@@ -13,11 +13,13 @@ function aries_customizer_register( $wp_customize ) {
 	$wp_customize->add_section( 'aries_colors_section' , array(
 	    'title'      => __( 'Color Scheme', 'aries' ),
 	    'priority'   => 12,
+	    'capability' => 'edit_theme_options'
 	) );
 
     $wp_customize->add_setting( 'aries_color_scheme', array(
     	'type' => 'theme_mod',
-    	'sanitize_callback' => 'aries_sanitize_color_scheme'
+    	'sanitize_callback' => 'aries_sanitize_color_scheme',
+    	'capability' => 'edit_theme_options'
     ) );
 
     $wp_customize->add_control( 'aries_color_scheme', array(
@@ -42,7 +44,8 @@ function aries_customizer_register( $wp_customize ) {
     $wp_customize->add_setting( 'aries_fullscreen_bg', array(
     	'type' => 'theme_mod',
     	'default' => false,
-    	'sanitize_callback' => 'aries_sanitize_fullscreen_bg'
+    	'sanitize_callback' => 'aries_sanitize_fullscreen_bg',
+    	'capability' => 'edit_theme_options'
     ) );
 
     $wp_customize->add_control( 'aries_fullscreen_bg', array(
@@ -58,11 +61,13 @@ function aries_customizer_register( $wp_customize ) {
 	$wp_customize->add_section( 'aries_logo_section' , array(
 	    'title'      => __( 'Site Logo', 'aries' ),
 	    'priority'   => 11,
+	    'capability' => 'edit_theme_options'
 	) );
 
     $wp_customize->add_setting( 'aries_logo', array(
     	'type' => 'theme_mod',
-    	'sanitize_callback' => 'aries_sanitize_logo'
+    	'sanitize_callback' => 'esc_url_raw',
+    	'capability' => 'edit_theme_options'
     ) );
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'aries_logo', array(
@@ -77,7 +82,8 @@ function aries_customizer_register( $wp_customize ) {
     $wp_customize->add_setting( 'aries_display_header_text', array(
     	'type' 	  => 'theme_mod',
     	'default' => true,
-    	'sanitize_callback' => 'aries_sanitize_display_header_text'
+    	'sanitize_callback' => 'aries_sanitize_display_header_text',
+    	'capability' => 'edit_theme_options'
     ) );
 
     $wp_customize->add_control( 'aries_display_header_text', array(
@@ -100,9 +106,6 @@ function aries_sanitize_color_scheme( $color_scheme ){
 	$predefined_color_schemes = array( 'default', 'red', 'violet', 'blue', 'green', 'yellow', 'black' );
 	if( in_array( $color_scheme, $predefined_color_schemes ) ) return $color_scheme;
 	return 'default';
-}
-function aries_sanitize_logo($logo){
-	return esc_url( $logo );
 }
 function aries_sanitize_fullscreen_bg($fullscreen_bg){
 	if( $fullscreen_bg == true || $fullscreen_bg == false ) return $fullscreen_bg;

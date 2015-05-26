@@ -1,7 +1,7 @@
 === Aries ===
 
 Contributors: wplovin
-Tags: one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-menu, featured-images, post-formats, sticky-post, translation-ready, full-width-template, sticky-post, theme-options, threaded-comments, black, blue, gray, orange, pink, purple, red, yellow, dark, light
+Tags: one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-menu, featured-images, post-formats, translation-ready, full-width-template, sticky-post, theme-options, threaded-comments, black, blue, gray, orange, pink, purple, red, yellow, dark, light
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -9,15 +9,29 @@ Aries is fully responsive WordPress theme with 7 colorful skins. Also, you can c
 
 == Bundled with a theme ==
 
-1. Font Awesome, MIT License - http://fortawesome.github.io/Font-Awesome/
-2. jQuery fitvids.js, WTFPL License - http://fitvidsjs.com/
-3. html5shiv.js, Dual licensed under the MIT or GPL Version 2 licenses - https://github.com/aFarkas/html5shiv/
-4. Images used in live preview - http://unsplash.com/
+1. Font Awesome
+Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
+2. jQuery fitvids.js
+Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+
+3. html5shiv.js
+Dual licensed under the MIT or GPL Version 2 licenses - https://github.com/aFarkas/html5shiv/
 
 == Changelog ==
 
 = 1.0.1 - Apr 22, 2015 =
 * Added rel="nofollow" to footer link
+* Removed get_post_format() from page.php
+* Removed duplicate sticky-post theme tag
+* Fixed bundled items license information @ readme.txt
+* Added 'capability' => 'edit_theme_options' to add_section() / add_setting() in inc/customizer.php
+* Changed 'aries_logo' setting sanitization callback to 'esc_url_raw' in inc/customizer.php
+* esc_url( $aries_site_logo ) in header.php
+* Bumped html5shiv version to 3.7.3-pre
+* Bundled unminified version of js/html5shiv.js
 
 = 1.0.0 - Apr 17, 2015 =
 * Initial release

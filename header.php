@@ -58,7 +58,7 @@
 	<header class="header-wrap">
 
 		<a class="site-logo" href="<?php echo esc_url( home_url() ); ?>">
-			<?php if( $aries_site_logo = get_theme_mod( 'aries_logo' ) ) echo '<img src="'.$aries_site_logo.'" alt=""/>'; ?>
+			<?php if( $aries_site_logo = get_theme_mod( 'aries_logo' ) ) echo '<img src="' . esc_url( $aries_site_logo ) . '" alt=""/>'; ?>
 			<?php if( ( $aries_site_title = get_bloginfo( 'title' ) ) && get_theme_mod( 'aries_display_header_text', true ) ) echo '<span>' . $aries_site_title . '</span>'; ?> 
 		</a>
 		<?php if( ( $aries_site_description = get_bloginfo( 'description' ) ) && get_theme_mod( 'aries_display_header_text', true ) ) echo '<br><span class="site-description">' . $aries_site_description . '</span>'; ?>
