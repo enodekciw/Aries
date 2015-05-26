@@ -11,7 +11,7 @@
  *
  * @package Aries
  * @since 1.0.0
- * @author Tom <hello@wplovin.com>
+ * @author Tom <hello@wplov.in>
  */
 
 /**
@@ -110,23 +110,37 @@ function aries_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) 
 		wp_enqueue_script( 'comment-reply' );
 
-	$predefined_color_schemes = array( 'default', 'red', 'violet', 'blue', 'green', 'yellow', 'black' );
-	$skin = get_theme_mod( 'aries_color_scheme' );
-	if( ! in_array( $skin, $predefined_color_schemes ) ) $skin = 'default';
-
-	if( $skin == 'default' ) {
-		$aries_stylesheet = get_stylesheet_uri();
-	} else {
-		$aries_stylesheet = WPLOVIN_THEME_PATH . '/skins/skin-' . $skin . '.css';
-	}
-
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-crete-round', aries_fonts_url(), array(), WPLOVIN_THEME_VERSION );	
 	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-fa-icons', WPLOVIN_THEME_PATH . '/assets/font-awesome/css/font-awesome.min.css', array(), 'v4.3.0' );
-	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-styles', $aries_stylesheet, array(), WPLOVIN_THEME_VERSION );
+	wp_enqueue_style( WPLOVIN_THEME_SLUG . '-styles', apply_filters( 'aries_stylesheet_url' , get_stylesheet_uri() ), array(), WPLOVIN_THEME_VERSION );
+	if( is_child_theme() ) wp_enqueue_style( WPLOVIN_THEME_SLUG . '-child-styles',  get_stylesheet_uri(), array(), WPLOVIN_THEME_VERSION );
 	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-fitvids-js', WPLOVIN_THEME_PATH . '/js/jquery.fitvids.js', array( 'jquery' ), 'v1.0.3', true );
 	wp_enqueue_script( WPLOVIN_THEME_SLUG .'-scripts', WPLOVIN_THEME_PATH . '/js/scripts.js', array( 'jquery' ), WPLOVIN_THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'aries_scripts_styles' );
+
+/**
+ * Filter out and return correct stylesheet URL.
+ *
+ * @package Aries
+ * @since 1.0.1
+ */
+function aries_stylesheet_skin_url( $aries_stylesheet_url ){
+	$predefined_color_schemes = array( 'default', 'red', 'violet', 'blue', 'green', 'yellow', 'black' );
+	$skin = get_theme_mod( 'aries_color_scheme' );
+
+	if( ! in_array( $skin, $predefined_color_schemes ) ) $skin = 'default';
+
+	if( $skin == 'default' ) {
+		$aries_stylesheet_url = get_stylesheet_uri();
+		if( is_child_theme() ) $aries_stylesheet_url = get_template_directory_uri() . '/style.css';
+	} else {
+		$aries_stylesheet_url = WPLOVIN_THEME_PATH . '/skins/skin-' . $skin . '.css'; 
+	}
+
+	return $aries_stylesheet_url;
+}
+add_filter( 'aries_stylesheet_url', 'aries_stylesheet_skin_url', 10, 1 );
 
 /**
  * Return the Google font stylesheet URL, if available.
