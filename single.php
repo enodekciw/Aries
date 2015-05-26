@@ -4,7 +4,7 @@
  *
  * @package Aries
  * @since 1.0.0
- * @author Tom <hello@wplovin.com>
+ * @author Tom <hello@wplov.in>
  */
 ?><?php get_header(); ?>
 	<section class="content-wrap <?php aries_content_wrap_class(); ?>">

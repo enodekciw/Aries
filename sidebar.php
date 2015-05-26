@@ -6,7 +6,7 @@
  *
  * @package Aries
  * @since 1.0.0
- * @author Tom <hello@wplovin.com>
+ * @author Tom <hello@wplov.in>
  */
 ?><?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
 	<div class="sidebar-wrap">

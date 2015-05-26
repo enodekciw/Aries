@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aries 1.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-05-26 11:52:37+00:00\n"
+"POT-Creation-Date: 2015-05-26 13:21:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -83,43 +83,43 @@ msgstr ""
 msgid "Main sidebar."
 msgstr ""
 
-#: functions.php:196
+#: functions.php:210
 msgid "Untitled"
 msgstr ""
 
-#: functions.php:265
+#: functions.php:279
 msgid "Permalink to %s"
 msgstr ""
 
-#: functions.php:284 functions.php:288
+#: functions.php:298 functions.php:302
 msgid ", "
 msgstr ""
 
-#: functions.php:310
+#: functions.php:324
 msgid "Browsing daily archives: %s"
 msgstr ""
 
-#: functions.php:312
+#: functions.php:326
 msgid "Browsing monthly archives: %s"
 msgstr ""
 
-#: functions.php:314
+#: functions.php:328
 msgid "Browsing yearly archives: %s"
 msgstr ""
 
-#: functions.php:316
+#: functions.php:330
 msgid "Browsing category archives: %s"
 msgstr ""
 
-#: functions.php:318
+#: functions.php:332
 msgid "Browsing tag archives: %s"
 msgstr ""
 
-#: functions.php:320
+#: functions.php:334
 msgid "Browsing search results: %s"
 msgstr ""
 
-#: functions.php:322
+#: functions.php:336
 msgid "Archives"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:148
+#: functions.php:162
 #. Translators: If there are characters in your language that are not
 #. * supported by Crete Round, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -188,17 +188,17 @@ msgctxt "Crete Round font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:274
 msgctxt "1: post format name. 2: date"
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: functions.php:312
+#: functions.php:326
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: functions.php:314
+#: functions.php:328
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""

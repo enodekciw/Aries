@@ -4,7 +4,7 @@
  *
  * @package Aries
  * @since 1.0.0
- * @author Tom <hello@wplovin.com>
+ * @author Tom <hello@wplov.in>
  */
 ?>
 <article id="post-none" class="hentry">

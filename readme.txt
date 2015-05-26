@@ -5,7 +5,12 @@ Tags: one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, c
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Aries is fully responsive WordPress theme with 7 colorful skins. Also, you can create your own color schemes combining background (or even fullscreen background images!) and accent colors. Oh, and did I mention that Aries adapts to your needs? By default content is displayed in a single column, but if you add some widgets to the sidebar.. it morphs into two columns (content + sidebar)! Perfect for personal bloggers. P.S. Built with love @ wplovin.com
+Aries is fully responsive WordPress theme with 7 colorful skins. Also, you can create your own color schemes combining background (or even fullscreen background images!) and accent colors. Oh, and did I mention that Aries adapts to your needs? By default content is displayed in a single column, but if you add some widgets to the sidebar.. it morphs into two columns (content + sidebar)! Perfect for personal bloggers. P.S. Built with love @ http://wplov.in/
+
+== Child Themes ==
+
+Please follow https://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme to create a Child Theme, if you really need to make some modifications to Aries.
+IMPORTANT: You won't need to worry about parent stylesheets, because those will be loaded automagically. Just create style.css as mentioned in that Codex link above and you are ready to go ;)
 
 == Bundled with a theme ==
 
@@ -22,7 +27,7 @@ Dual licensed under the MIT or GPL Version 2 licenses - https://github.com/aFark
 
 == Changelog ==
 
-= 1.0.1 - Apr 22, 2015 =
+= 1.0.1 - May 26, 2015 =
 * Added rel="nofollow" to footer link
 * Removed get_post_format() from page.php
 * Removed duplicate sticky-post theme tag
@@ -32,9 +37,11 @@ Dual licensed under the MIT or GPL Version 2 licenses - https://github.com/aFark
 * esc_url( $aries_site_logo ) in header.php
 * Bumped html5shiv version to 3.7.3-pre
 * Bundled unminified version of js/html5shiv.js
+* Reworked skins functionality to be compatible with Child Themes.
+* wplovin.com -> wplov.in domain change
 
 = 1.0.0 - Apr 17, 2015 =
 * Initial release
 
-Aries WordPress Theme, Copyright 2015 wplovin.com
+Aries WordPress Theme, Copyright 2015 wplov.in
 Aries is distributed under the terms of the GNU GPLv2 or later
